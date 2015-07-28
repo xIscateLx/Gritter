@@ -1,12 +1,13 @@
 /*
  * Gritter for jQuery
- * http://www.boedesign.com/
+ * https://github.com/foxythemes/Gritter
  *
+ * Copyright (c) 2015 Foxy Themes
  * Copyright (c) 2012 Jordan Boesch
  * Dual licensed under the MIT and GPL licenses.
  *
- * Date: February 24, 2012
- * Version: 1.7.4
+ * Date: July 28, 2015
+ * Version: 1.7.5
  */
 
 (function($){
@@ -80,8 +81,8 @@
 		_is_setup: 0,
 		_tpl_close: '<a class="gritter-close" href="#" tabindex="1">Close Notification</a>',
 		_tpl_title: '<span class="gritter-title">[[title]]</span>',
-		_tpl_item: '<div id="gritter-item-[[number]]" class="gritter-item-wrapper [[item_class]]" style="display:none" role="alert"><div class="gritter-top"></div><div class="gritter-item">[[close]][[image]]<div class="[[class_name]]">[[title]]<p>[[text]]</p></div><div style="clear:both"></div></div><div class="gritter-bottom"></div></div>',
-		_tpl_wrap: '<div id="gritter-notice-wrapper"></div>',
+		_tpl_item: '<div id="gritter-item-[[number]]" class="gritter-item-wrapper [[item_class]]" style="display:none" role="alert"><div class="gritter-item">[[close]][[image]]<div class="[[class_name]]">[[title]]<p>[[text]]</p></div><div style="clear:both"></div></div></div>',
+		_tpl_wrap: '<div id="gritter-notice-wrapper" class="gritter-main-wrapper"></div>',
 		
 		/**
 		* Add a gritter notification to the screen
@@ -132,7 +133,7 @@
 				this._custom_timer = time_alive;
 			}
 			
-			var image_str = (image != '') ? '<img src="' + image + '" class="gritter-image" />' : '',
+			var image_str = (image != '') ? '<div class="gritter-img-container"><img src="' + image + '" class="gritter-image" /></div>' : '',
 				class_name = (image != '') ? 'gritter-with-image' : 'gritter-without-image';
 			
 			// String replacements on the template
