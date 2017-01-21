@@ -2,12 +2,11 @@
  * Gritter for jQuery
  * https://github.com/foxythemes/Gritter
  *
- * Copyright (c) 2015 Foxy Themes
+ * Copyright (c) 2017 Foxy Themes
  * Copyright (c) 2012 Jordan Boesch
  * Dual licensed under the MIT and GPL licenses.
  *
- * Date: July 28, 2015
- * Version: 1.7.5
+ * Version: 1.8.0
  */
 
 (function($){
@@ -109,6 +108,7 @@
 			var title = params.title, 
 				text = params.text,
 				image = params.image || '',
+				icon = params.icon || false,
 				sticky = params.sticky || false,
 				item_class = params.class_name || $.gritter.options.class_name,
 				position = $.gritter.options.position,
@@ -133,8 +133,17 @@
 				this._custom_timer = time_alive;
 			}
 			
-			var image_str = (image != '') ? '<div class="gritter-img-container"><img src="' + image + '" class="gritter-image" /></div>' : '',
-				class_name = (image != '') ? 'gritter-with-image' : 'gritter-without-image';
+			var image_str = '';
+
+			if( image != '' ){
+				image_str = '<div class="gritter-img-container"><img src="' + image + '" class="gritter-image" /></div>';
+			} else if ( icon ) {
+				image_str = '<div class="gritter-icon-container"><span class="gritter-icon"></span></div>';
+			} else {
+				image_str = '';
+			}
+
+			var class_name = (image != '') ? 'gritter-with-image' : 'gritter-without-image';
 			
 			// String replacements on the template
 			if(title){
