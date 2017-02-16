@@ -1,13 +1,22 @@
 # Gritter for jQuery 
 
 A small growl-like notification plugin for jQuery
-- http://boedesign.com/blog/2009/07/11/growl-for-jquery-gritter/
+- https://github.com/xIscateLx/Gritter
 
 ## Installation
 
-    $ bower install jquery.gritter
+    $ bower install xiscatelx.gritter
 
 ## Change Log
+
+### Changes in 1.7.6 (February 16, 2017)
+
+* Added icon support option
+* Removed show close button on hover
+
+### Changes in 1.7.5 (Jul 29, 2015)
+
+* Deleted unnecessary html layout & added some layout fixes
 
 ### Changes in 1.7.4 (February 24, 2012)
 
