@@ -4,9 +4,10 @@
  *
  * Copyright (c) 2017 Foxy Themes
  * Copyright (c) 2012 Jordan Boesch
+ * Copyright (c) 2017 Lyashev Rostislav
  * Dual licensed under the MIT and GPL licenses.
  *
- * Version: 1.8.0
+ * Version: 1.7.7
  */
 
 (function($){

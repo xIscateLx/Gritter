@@ -9,6 +9,10 @@ A small growl-like notification plugin for jQuery
 
 ## Change Log
 
+### Changes in 1.7.7 (Mart 3, 2017)
+
+* Add SCSS style
+
 ### Changes in 1.7.6 (February 16, 2017)
 
 * Added icon support option
