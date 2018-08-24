@@ -1,6 +1,6 @@
 {
   "name": "xiscatelx.gritter",
-  "version": "1.7.9",
+  "version": "1.7.10",
   "description": "A small growl-like notification plugin for jQuery",
   "homepage": "https://github.com/xIscateLx/Gritter",
   "keywords": [
